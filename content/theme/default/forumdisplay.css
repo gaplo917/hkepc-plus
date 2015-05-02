@@ -1,0 +1,49 @@
+/**
+ * Created by Gaplo917 on 2/5/15.
+ */
+/*contentHeader*/
+.colplural, .colplural th, .colplural td, th.highlight, td.highlight {
+    background-color: #333333!important;
+}
+
+/*// redundent pixel on ForumDisplay*/
+.threadtype {
+    border-top: inherit!important;
+}
+
+/*Increase text size on each thread*/
+.datalist .datatable th.subject{
+     font-size:18px;
+     padding:30px 0;
+ }
+
+/*Mouse over effect*/
+.datalist .datatable tbody:hover{
+    background-color: rgba(0,255,0,0.1);
+}
+
+
+.threadlist th em a {
+    font-size: 14px !important;
+}
+
+/*Remove border line of subform*/
+.list,.list td,.list th{
+    border-top:inherit!important;
+}
+/*Subforum (子版塊）*/
+#subforum{
+    margin:inherit!important;
+    background-color: #333333!important;
+    padding: 20px 0!important;
+}
+
+/*Subforum header (子版塊）*/
+.content .list h3{
+    color:#429ABE !important;
+}
+
+/*Redundant Bottom line */
+#onlinelist dt{
+    border-top:inherit!important;
+}

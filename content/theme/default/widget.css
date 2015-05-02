@@ -1,0 +1,85 @@
+/*// Pagination Button*/
+.pages a, .pageback a {
+    border-color: #374200 !important;
+    background-color: #000 !important;
+    background: inherit !important;
+}
+
+/*// 公告 http://www.hkepc.com/forum/*/
+#ann {
+    border: inherit !important;
+    border-with: inherit !important;
+    background: inherit !important;
+}
+
+/*group*/
+#mainIndex .group {
+    border-bottom: #0D6214 1px solid !important;
+}
+
+/*mainPortal*/
+#mainPortal, #mainIndex, #mainPoll, #mainUpdates {
+    border: inherit !important;
+}
+
+/* Quick reply editor*/
+.editor_tb {
+    border: inherit !important;
+    background: inherit !important;
+}
+
+#f_post .txtarea {
+    border: inherit !important;
+    background-color: #333333 !important;
+}
+
+#fastpostsubmit {
+    width: inherit !important;
+    height: inherit !important;
+    background: inherit !important;
+    font-size: inherit !important;
+    font-height: inherit !important;
+    line-height: inherit !important;
+}
+/*------------------------------*/
+
+/*------ Main editor ---------*/
+.editorcontent {
+    background: inherit !important;
+}
+
+/*titleInput*/
+.editorcontent input.txt {
+    width: 70% !important;
+    height: 60px !important;
+    font-size: 20px !important;
+    background-color: #333 !important;
+}
+
+/*redundant*/
+.editorcontent textarea {
+    background-color: #333 !important;
+}
+
+/*contentInput*/
+.newediter {
+    background-color: #333 !important;
+}
+
+/*showSourceCheckBox*/
+a.plugeditor {
+    color: #000 !important;
+}
+
+/*countReadNumber*/
+.nums em {
+    color: #79812C !important;
+
+}
+
+/*---------------------------*/
+
+#footer {
+    background-color: #222 !important;
+
+}

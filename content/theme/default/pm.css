@@ -1,0 +1,19 @@
+/**
+ * Created by Gaplo917 on 2/5/15.
+ */
+
+/* Timestamp*/
+.pm_list .cite{
+    color:#26843C!important;
+}
+
+/*UserName*/
+.pm_list .cite cite, .pm_list .cite cite a{
+    color:#CECF36!important;
+}
+
+/*Reply TextArea*/
+.pmreply textarea{
+    border: inherit;
+    background-color: #333333;
+}

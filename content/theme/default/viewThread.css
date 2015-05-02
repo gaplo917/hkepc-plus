@@ -1,0 +1,81 @@
+/**
+ * Created by Gaplo917 on 2/5/15.
+ */
+/* Every of the post will have empty adcontent */
+.adcontent {
+    background-color: #272822 !important;
+    border-bottom: 1px solid black !important;
+}
+
+/*Left Panel (showing the author) */
+.mainbox td.postauthor {
+    background-color: #191919 !important;
+}
+
+/*回覆|發貼制 bg*/
+.forumcontrol table td {
+    background-color: #272822 !important;
+}
+
+/* 發表於 yyyy-m-dd hh:mm*/
+.posterinfo a, .posterinfo em {
+    color: #666644 !important;
+}
+.postact{
+    max-width: none!important;
+}
+/*Redundant area new reply/post button*/
+.modaction{
+    display: none;
+}
+
+/*引用*/
+.quote {
+    background-color: #333333 !important;
+}
+
+/* Code Block*/
+.quote blockquote {
+    padding: 10px 20px !important;
+}
+
+/*相關文章*/
+.box h1 {
+    background: inherit !important;
+
+}
+
+/*倒序看帖 | 樓層數目*/
+.postinfo strong a {
+    border: inherit !important;
+
+}
+
+/*Thread Title*/
+#threadtitle {
+    border: inherit !important;
+
+}
+
+/*Thread Title Text*/
+.postmessage h1, .postmessage h2 {
+    color: #eeeeee !important;
+    margin-bottom: 20px !important;
+    font-size: 1.8em !important;
+}
+
+/*Post Action panel*/
+.postactions {
+    border: inherit!important;
+}
+/*Remove Quick reply redundant area*/
+#f_post .postauthor{
+    display: none;
+}
+
+/*re-aglin the quicky reply area*/
+#f_post table{
+    width:inherit !important;
+    margin:auto !important;
+
+}
