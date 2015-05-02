@@ -79,3 +79,23 @@
     margin:auto !important;
 
 }
+
+/*facebook iframe*/
+.fb_iframe_widget iframe{
+    background-color: #666666;
+}
+
+/*附件: 您需要登錄才可以下載或查看附件。沒有帳號？註冊*/
+.locked{
+    background-color: #333333 !important;
+    border:0 !important;
+    width:100% !important;
+    text-align: center;
+}
+
+.postmessage .locked  em {
+     color: #ffffff !important;
+ }
+.postmessage .locked  a {
+    color: #D62 !important;
+}
