@@ -20,7 +20,7 @@
 	"background": {
 		"matches": ["http://www.hkepc.com/forum/*", "https://www.hkepc.com/forum/*"],
 		"scripts": ["plugins/q/q.js","background.js"],
-		"persistent": true
+		"persistent": false
 	},
 
 	"web_accessible_resources": [
