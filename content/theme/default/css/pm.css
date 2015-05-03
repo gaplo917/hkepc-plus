@@ -17,3 +17,7 @@
     border: inherit;
     background-color: #333333;
 }
+
+.pm_list li{
+    border-bottom: inherit!important;
+}

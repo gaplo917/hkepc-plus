@@ -1,0 +1,14 @@
+{
+    // should relative to the paht/content/theme/{name} folder
+    "css":[
+        "css/common.css",
+        "css/forumdisplay.css",
+        "css/pm.css",
+        "css/viewThread.css",
+        "css/widget.css"
+    ],
+    "js":[
+        // indicate the UIhacks
+        "UIhacks/threadColorInvert.js"
+    ]
+}

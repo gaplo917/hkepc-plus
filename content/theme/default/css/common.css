@@ -12,8 +12,8 @@ body, td, input, textarea, select, button {
 
 }
 /*All Link */
-a {
-    color: #D0D0C7 !important;
+a{
+    color: #D0D0C7!important;
 }
 /*------------------------------------------*/
 
@@ -35,7 +35,7 @@ a {
 
 /*All caption in main page*/
 #mainIndex .forumInfo a.caption {
-    color: #429ABE !important;
+    color: #66b9dd !important;
 }
 
 /*All table element */
@@ -97,3 +97,9 @@ a {
     background: inherit!important;
 }
 /*------------------------------------------*/
+
+
+/*index.php TimeStamp*/
+.forumInfo cite{
+    color: #666666 !important;
+}

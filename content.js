@@ -86,10 +86,18 @@ $(function(){
 			container : $('.postactions')
 		},
 
-		postTimeStampPanel :$('.postcontent .postinfo .authorinfo')
+		postTimeStampPanel :$('.postcontent .postinfo .authorinfo'),
+
+        // Threads subject
+        threads : $('.datatable tr .subject a')
 
 
 	};
+
+    var pm = {
+        // PM 查看消息
+        readBtns : $('.pm_list .more a')
+    };
 
 	// Change the 發表於 XX 小時前 | 只看該作者 to the left panel
 	viewThread.postTimeStampPanel.each(function () {
@@ -156,6 +164,13 @@ $(function(){
 	});
 
 
+
+    pm.readBtns.each(function () {
+       $(this).addClass('btn btn-xs btn-info postbtn');
+        $(this).removeClass('to');
+
+    });
+
 });
 
 function guidGenerator() {
@@ -163,4 +178,19 @@ function guidGenerator() {
 		return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
 	};
 	return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+}
+
+function hexToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+        return r + r + g + g + b + b;
+    });
+
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
 }
