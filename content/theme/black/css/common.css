@@ -1,6 +1,8 @@
 /**
  * Created by Gaplo917 on 2/5/15.
  */
+
+
 /*-------------- Generic Element -------------*/
 html, body {
     background: inherit !important;
@@ -11,6 +13,7 @@ body, td, input, textarea, select, button {
     color: #AAAAAA !important;
 
 }
+
 /*All Link */
 a{
     color: #D0D0C7!important;

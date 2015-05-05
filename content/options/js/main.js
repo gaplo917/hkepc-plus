@@ -1,7 +1,6 @@
 /**
  * Created by Gaplo917 on 2/5/15.
  */
-var THEME_PREIFX = "content/theme/default";
 
 $(function () {
 
@@ -17,59 +16,75 @@ $(function () {
                         checkbox: {
                             label: "123"
                         },
-                        clickControl: {
+                        themeControl: {
                             id: "theme",
                             btnClass: "theme-control",
                             description: "Theme",
                             buttons: [
                                 {
+                                    // Sample model, will be overwrite later
                                     label: "White",
                                     status: "none",
-                                    value: 0
-                                },
-                                {
-                                    label: "Black",
-                                    status: "btn-success",
-                                    value: 1
+                                    value: "default"
                                 }
                             ]
-                        }
+                        },
+                        //fontControl: {
+                        //    id: "font",
+                        //    btnClass: "font-control",
+                        //    description: "Font",
+                        //    buttons: [
+                        //        {
+                        //            // Sample model, will be overwrite later
+                        //            label: "White",
+                        //            status: "none",
+                        //            value: "default"
+                        //        }
+                        //    ]
+                        //},
                     };
+                $.getJSON('/content/theme/theme.json', function (themes) {
+                    context.themeControl.buttons = [];
+                    _.each(themes, function (theme,themeKey) {
+                        context.themeControl.buttons.push({
+                            label: theme.name,
+                            value: themeKey
+                        });
+                    })
+                })
+                .then(function () {
+                    chrome.storage.sync.get('theme', function (items) {
+                        _.each(context.themeControl.buttons, function (button) {
+                            if(button.value == items.theme){
+                                button.status = "btn-success";
+                            }
+                            else{
+                                button.status = "none";
+                            }
+                        });
 
-                chrome.storage.sync.get('theme', function (items) {
-                    if (items.theme === undefined) {
-                        context.clickControl.buttons[0].status = "btn-success";
-                        context.clickControl.buttons[1].status = "none";
-                    }
-                    else {
-                        context.clickControl.buttons[0].status = "none";
-                        context.clickControl.buttons[1].status = "btn-success";
-                    }
+                        var compiledHTML = template(context);
 
-                    var compiledHTML = template(context);
+                        // Add the compiled HTML to main
+                        $('#main').append(compiledHTML);
+                        var buttons = $('.' + context.themeControl.btnClass);
+                        buttons.each(function () {
+                            $(this).click(function () {
+                                //remove all active class first
+                                buttons.each(function () {
+                                    $(this).removeClass('btn-success')
+                                });
 
-                    // Add the compiled HTML to main
-                    $('#main').append(compiledHTML);
-                    var buttons = $('.' + context.clickControl.btnClass);
-                    buttons.each(function () {
-                        $(this).click(function () {
-                            //remove all active class first
-                            buttons.each(function () {
-                                $(this).removeClass('btn-success')
+                                //add active class
+                                $(this).addClass('btn-success');
+
+                                saveTheme($(this).attr('data-value'));
+
                             });
-
-                            //add active class
-                            $(this).addClass('btn-success');
-
-                            if ($(this).attr('data-value') == '0') {
-                                removeTheme();
-                            }
-                            else if ($(this).attr('data-value') == '1') {
-                                saveTheme();
-                            }
                         });
                     });
                 });
+
             });
         }).done();
 });
@@ -85,9 +100,9 @@ function registerPartial(key, path) {
 
 }
 
-function saveTheme() {
+function saveTheme(val) {
     //// Save it using the Chrome extension storage API.
-    chrome.storage.sync.set({theme: THEME_PREIFX}, function () {
+    chrome.storage.sync.set({theme: val}, function () {
         // Notify that we saved.
         console.log('theme saved');
     });

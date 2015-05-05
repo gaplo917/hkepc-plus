@@ -10,23 +10,27 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
         if(pattern.test(tab.url)) {
 
-            chrome.storage.sync.get('theme', function (items) {
+            chrome.storage.sync.get(['theme','font'], function (items) {
 
                 // ONLY if the theme is set
                 if (items.theme !== undefined) {
-                    getJSON(chrome.runtime.getURL(items.theme + '/theme.json'),function(response){
-                        _.each(response.css, function (css) {
+                    getJSON(chrome.runtime.getURL('content/theme/theme.json'),function(response){
+                        _.each(response[items.theme].css, function (css) {
+                            // Determin Absolute/Relative Path
+                            var file = css.startsWith('/') ? css : 'content/theme/' + items.theme + '/' + css;
                             chrome.tabs.insertCSS(tabId, {
-                                file: items.theme + '/' + css,
+                                file: file,
                                 allFrames: false,
                                 runAt: "document_start"
                             });
                         });
 
                         // For each js
-                        _.each(response.js, function (js) {
+                        _.each(response[items.theme].js, function (js) {
+                            var file = js.startsWith('/') ? js : 'content/theme/' + items.theme + '/' + js;
+
                             chrome.tabs.executeScript(tabId, {
-                                file:items.theme +'/' + js,
+                                file: file,
                                 runAt: "document_start"
                             });
                         });
