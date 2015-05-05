@@ -14,8 +14,11 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
                 // ONLY if the theme is set
                 if (items.theme !== undefined) {
-                    getJSON(chrome.runtime.getURL('content/theme/theme.json'),function(response){
+                    $.getJSON(chrome.runtime.getURL('content/theme/theme.json'),function(response){
+
+                        // For each css
                         _.each(response[items.theme].css, function (css) {
+
                             // Determin Absolute/Relative Path
                             var file = css.startsWith('/') ? css : 'content/theme/' + items.theme + '/' + css;
                             chrome.tabs.insertCSS(tabId, {
@@ -23,16 +26,20 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
                                 allFrames: false,
                                 runAt: "document_start"
                             });
+
                         });
 
                         // For each js
                         _.each(response[items.theme].js, function (js) {
-                            var file = js.startsWith('/') ? js : 'content/theme/' + items.theme + '/' + js;
 
+                            // Determin Absolute/Relative Path
+                            var file = js.startsWith('/') ? js : 'content/theme/' + items.theme + '/' + js;
                             chrome.tabs.executeScript(tabId, {
                                 file: file,
+                                allFrames: false,
                                 runAt: "document_start"
                             });
+
                         });
 
                     });
@@ -44,19 +51,4 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     }
 
 });
-
-function getJSON(url,cb){
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url , true);
-    xhr.setRequestHeader("Content-Type","application/json");
-    xhr.send();
-    xhr.onreadystatechange = function()
-    {
-        try{
-            cb(JSON.parse(xhr.response));
-        }catch(err){
-            //Known error  (Uncaught SyntaxError: Unexpected end of input) on v8 compiler, no need to handle
-        }
-    }
-}
 

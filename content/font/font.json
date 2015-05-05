@@ -1,8 +1,10 @@
 {
-	"fonts":[
-		{
-			"name":"Google Noto 黑體",
-			"css":"cwTeXHei/font.css"
-		}
-	]
+    "default":{
+        "name":"Default"
+    },
+    "cwTexHei": {
+        "name":"Google Noto 黑體",
+        "css":"cwTeXHei/font.css"
+    }
+
 }
