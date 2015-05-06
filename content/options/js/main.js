@@ -3,9 +3,6 @@
  */
 var context = {
     title: "HKEPC +",
-    checkbox: {
-        label: "123"
-    },
     controls:{
         theme:{
             context:"/content/theme/theme.json",
@@ -37,30 +34,29 @@ var context = {
 };
 $(function () {
 
-    registerPartial('checkbox', 'checkbox.hbs.html')
-        .then(function () {
-            registerPartial('clickControl', 'clickControl.hbs.html');
-        })
-        .then(function () {
-            $.get(chrome.runtime.getURL('content/options/templates/main.hbs.html'), function (templateHtml) {
+    // Sync - run all these async task first
+    Q.all([
+        registerPartial('checkbox', 'checkbox.hbs.html'),
+        registerPartial('clickControl', 'clickControl.hbs.html')
+    ]);
 
-                //render main view
-                var template = Handlebars.compile(templateHtml);
+    getWithPromise(chrome.runtime.getURL('content/options/templates/main.hbs.html'))
+        .then(function (templateHtml) {
+            //render main view
+            var template = Handlebars.compile(templateHtml),
+                funcs = [],
+                callbacks = [],
+                controlsKey = [];
 
-                var funcs = [],
-                    callbacks = [],
-                    controlsKey = [];
+            _.each(context.controls, function (control,controlType) {
 
-                _.each(context.controls, function (control,controlType) {
+                //save the keys
+                control.id = controlType;
+                controlsKey.push(control.id);
 
-                    //save the keys
-                    control.id = controlType;
-                    controlsKey.push(control.id);
-
-
-                    //Construct create Control context function
-                    funcs.push(
-                        getJSONWithPromise(control.context)
+                //Construct create Control context function
+                funcs.push(
+                    getJSONWithPromise(control.context)
                         .then(function (context) {
                             control.buttons = [];
                             control.btnClass = controlType + '-control';
@@ -71,38 +67,37 @@ $(function () {
                                 });
                             })
                         })
-                    );
-                    //Construct bind key callback and call it after view has attached
-                    callbacks.push(
-                        {
-                            apply:bindControlsBtn,
-                            param:control
-                        }
-                    )
-                });
-                Q.all(funcs).then(function () {
+                );
+                //Construct bind key callback and call it after view has attached
+                callbacks.push(
+                    {
+                        apply:bindControlsBtn,
+                        param:control
+                    }
+                )
+            });
 
-                    chrome.storage.sync.get(controlsKey, function (items) {
-                        _.each(items, function (item,index) {
-                            _.each(context.controls[index].buttons, function (button) {
-                                button.status = button.value == item ? 'btn-success' : 'none';
-                            });
-                        });
+            // Sync - run all async task first
+            Q.all(funcs);
 
-                        var compiledHTML = template(context);
-
-                        // Add the compiled HTML to main
-                        $('#main').append(compiledHTML);
-
-                        _.each(callbacks, function (cb) {
-                            cb.apply(cb.param)
-                        });
-
+            chrome.storage.sync.get(controlsKey, function (items) {
+                _.each(items, function (item,index) {
+                    _.each(context.controls[index].buttons, function (button) {
+                        button.status = button.value == item ? 'btn-success' : 'none';
                     });
-                })
+                });
+
+                var compiledHTML = template(context);
+
+                // Add the compiled HTML to main
+                $('#main').append(compiledHTML);
+
+                _.each(callbacks, function (cb) {
+                    cb.apply(cb.param)
+                });
 
             });
-        }).done();
+        });
 });
 
 function bindControlsBtn(control){
@@ -120,7 +115,6 @@ function bindControlsBtn(control){
 
                 var obj = {};
                 obj[control.id] = $(this).attr('data-value');
-                console.log(obj);
                 save(obj);
 
                 resolve(true);
@@ -140,11 +134,11 @@ function registerPartial(key, path) {
 
 }
 
-function save(val) {
-    //// Save it using the Chrome extension storage API.
-    chrome.storage.sync.set(val, function () {
+function save(obj) {
+    // Save it using the Chrome extension storage API.
+    chrome.storage.sync.set(obj, function () {
         // Notify that we saved.
-        console.log('theme saved');
+        console.log('saved');
     });
 }
 
@@ -156,10 +150,18 @@ function getJSONWithPromise(url){
     });
 }
 
-function removeTheme() {
-    //// Remove it using the Chrome extension storage API.
-    chrome.storage.sync.remove('theme', function () {
-        // Notify that we saved.
-        console.log('theme removed');
+function getWithPromise(url){
+    return Q.Promise(function (resolve,reject,notify) {
+        $.get(url, function (response) {
+            resolve(response);
+        });
+    });
+}
+
+function removeTheme(obj) {
+    // Remove it using the Chrome extension storage API.
+    chrome.storage.sync.remove(obj, function () {
+        // Notify that we removed.
+        console.log('removed');
     });
 }
