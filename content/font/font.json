@@ -4,7 +4,11 @@
     },
     "cwTexHei": {
         "name":"Google Noto 黑體",
-        "css":"cwTeXHei/font.css"
+        "css": ["font.css"]
+    },
+    "PMingLiu":{
+        "name":"新細明體",
+        "css": ["font.css"]
     }
 
 }
