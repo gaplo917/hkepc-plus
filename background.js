@@ -12,38 +12,23 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
             chrome.storage.sync.get(['theme','font'], function (items) {
 
-                // ONLY if the theme is set
+                // apply plugin ONLY if the corresponding setting is set
                 if (items.theme !== undefined) {
-                    $.getJSON(chrome.runtime.getURL('content/theme/theme.json'),function(response){
-
-                        // For each css
-                        _.each(response[items.theme].css, function (css) {
-
-                            // Determin Absolute/Relative Path
-                            var file = css.startsWith('/') ? css : 'content/theme/' + items.theme + '/' + css;
-                            chrome.tabs.insertCSS(tabId, {
-                                file: file,
-                                allFrames: false,
-                                runAt: "document_start"
-                            });
-
-                        });
-
-                        // For each js
-                        _.each(response[items.theme].js, function (js) {
-
-                            // Determin Absolute/Relative Path
-                            var file = js.startsWith('/') ? js : 'content/theme/' + items.theme + '/' + js;
-                            chrome.tabs.executeScript(tabId, {
-                                file: file,
-                                allFrames: false,
-                                runAt: "document_start"
-                            });
-
-                        });
-
+                    applyPlugin({
+                        tabId : tabId,
+                        setting : items.theme,
+                        json : "theme.json",
+                        context: 'content/theme/'
                     });
+                }
 
+                if(items.font !== undefined){
+                    applyPlugin({
+                        tabId : tabId,
+                        setting : items.font,
+                        json : "font.json",
+                        context: 'content/font/'
+                    });
                 }
 
             });
@@ -52,3 +37,34 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
 });
 
+function applyPlugin(opts){
+    $.getJSON(chrome.runtime.getURL(opts.context + opts.json),function(response){
+
+        // For each css
+        _.each(response[opts.setting].css, function (css) {
+
+            // Determin Absolute/Relative Path
+            var file = css.startsWith('/') ? css : opts.context + opts.setting + '/' + css;
+            chrome.tabs.insertCSS(opts.tabId, {
+                file: file,
+                allFrames: false,
+                runAt: "document_start"
+            });
+
+        });
+
+        // For each js
+        _.each(response[opts.setting].js, function (js) {
+
+            // Determin Absolute/Relative Path
+            var file = js.startsWith('/') ? js : 'content/theme/' + opts.setting + '/' + js;
+            chrome.tabs.executeScript(opts.tabId, {
+                file: file,
+                allFrames: false,
+                runAt: "document_start"
+            });
+
+        });
+
+    });
+}
