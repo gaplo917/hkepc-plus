@@ -12,6 +12,9 @@ requirejs.config({
         q: '../../../plugins/q/q',
         handleBars:'../../../plugins/handlebar/handlebars-v3.0.3',
         underscore:'../../../plugins/underscore/underscore',
-        context:'./app/context'
+        utils:'./app/utils',
+        EpcController:'./app/EpcController',
+        EpcModel:'./app/EpcModel'
+
     }
 });
