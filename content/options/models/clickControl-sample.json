@@ -1,0 +1,12 @@
+{
+	"context":"The path of the partial context JSON",
+	"btnClass": "the button class",
+	"description": "Display name of control",
+	"buttons": [
+		{
+			"label": "Display name of the button",
+			"status": "none | btn-success",
+			"value": "value to be store"
+		}
+	]
+}
