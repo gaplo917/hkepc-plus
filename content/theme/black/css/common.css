@@ -83,7 +83,7 @@ a{
 /*---------Floating Post Window ------------*/
 .m_c {
     background: inherit !important;
-    background-color: rgba(23, 23, 23, 0.7) !important;
+    background-color: rgba(23, 23, 23, 0.8) !important;
 }
 
 .m_c .txt {
@@ -93,6 +93,10 @@ a{
 }
 
 .m_c .float_post .txtarea {
+    background: rgba(23, 23, 23, 0.4);
+    color: #D0D0C7;
+}
+.m_c textarea{
     background: rgba(23, 23, 23, 0.4);
     color: #D0D0C7;
 }

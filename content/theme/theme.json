@@ -5,18 +5,20 @@
     "black":{
         "name":"Black",
         "css":[
-            "/plugins/bootstrap/css/bootstrap.min.css",
-            "/plugins/rainbow/monokai.css",
             "css/common.css",
             "css/forumdisplay.css",
             "css/pm.css",
             "css/viewThread.css",
-            "css/widget.css"
+            "css/widget.css",
+            "/plugins/bootstrap/css/bootstrap.min.css",
+            "/plugins/rainbow/monokai.css"
         ],
         "js":[
+            "UIhacks/threadColorInvert.js",
+            "UIhacks/blurFloatingWindow.js",
             "/plugins/bootstrap/js/bootstrap.min.js",
-            "/plugins/rainbow/rainbow-custom.min.js",
-            "UIhacks/threadColorInvert.js"
+            "/plugins/rainbow/rainbow-custom.min.js"
+
         ]
     }
 

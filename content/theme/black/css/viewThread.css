@@ -55,7 +55,6 @@
 #threadtitle {
     border: inherit !important;
     color:#dddddd!important;
-    text-decoration: underline;
     font-weight: bolder!important;
 
 }
@@ -64,7 +63,7 @@
 .postmessage h1, .postmessage h2 {
     /*color: #eeeeee !important;*/
     margin-bottom: 18px !important;
-    font-size: 1.4em !important;
+    font-size: 1.3em !important;
 }
 
 /*Post Action panel*/
