@@ -92,7 +92,12 @@ $(function(){
 		postTimeStampPanel :$('.postcontent .postinfo .authorinfo'),
 
         // Threads subject
-        threads : $('.datatable tr .subject a')
+        threads : $('.datatable tr .subject a'),
+
+        popUpUserInfo: {
+            container: $('.popupmenu_popup.userinfopanel'),
+            userStatus: $('.popupmenu_popup.userinfopanel .popuserinfo > p > em')
+        }
 
 
 	};

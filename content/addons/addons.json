@@ -26,6 +26,14 @@
         "js":[
             "js/changeTimestampPos.js"
         ]
+    },
+    "showOnOffline":{
+        "id":4,
+        "name":"Show User ON/OFFLINE",
+        "css":[],
+        "js":[
+            "index.js"
+        ]
     }
 
 }
