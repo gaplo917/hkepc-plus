@@ -14,7 +14,9 @@ requirejs.config({
         underscore:'../../../plugins/underscore/underscore',
         utils:'./app/utils',
         EpcController:'./app/EpcController',
-        EpcModel:'./app/EpcModel'
+        EpcModel:'./app/EpcModel',
+        ClickControl:'./app/widgets/ClickControl',
+        SwitchPanel: './app/widgets/SwitchPanel'
 
     }
 });
