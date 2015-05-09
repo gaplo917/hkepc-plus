@@ -1,0 +1,27 @@
+{
+    "betterButton":{
+        "id":1,
+        "name":"Better Button",
+        "css":[],
+        "js":[
+            "js/betterButton.js"
+        ]
+    },
+    "betterCodeBlock":{
+        "id":2,
+        "name":"Better CodeBlock",
+        "css":[],
+        "js":[
+            "js/betterCodeBlock.js"
+        ]
+    },
+    "changeTimestampPos":{
+        "id":3,
+        "name":"Better Post",
+        "css":[],
+        "js":[
+            "js/changeTimestampPos.js"
+        ]
+    }
+
+}

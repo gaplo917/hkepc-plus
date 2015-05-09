@@ -31,6 +31,53 @@ define("utils",function (require) {
                 });
             });
         },
+        bindSwitchBtn: function (switchControl) {
+            return Q.Promise(function (resolve,reject,notify) {
+                var buttons = $('.' + switchControl.btnClass);
+                buttons.each(function () {
+                    $(this).click(function () {
+                        var btn = $(this);
+
+                        if($(this).hasClass('btn-success')){
+                            //remove active class
+                            $(this).removeClass('btn-success');
+
+                            chrome.storage.sync.get(['addons'], function (items) {
+                                _.each(switchControl.buttons, function (button) {
+                                    if(button.value ==  btn.attr('data-value')){
+                                        delete items['addons'][button.key];
+                                    }
+                                });
+
+                                Utils.saveSetting(items);
+                            });
+                        }
+                        else{
+
+                            //add active class
+                            $(this).addClass('btn-success');
+
+                            chrome.storage.sync.get(['addons'], function (items) {
+
+                                if(items['addons'] == undefined){
+                                    items['addons'] = {};
+                                }
+
+                                _.each(switchControl.buttons, function (button) {
+                                   if(button.value ==  btn.attr('data-value')){
+                                       items['addons'][button.key] = 1;
+                                   }
+                                });
+
+                                Utils.saveSetting(items);
+                            });
+
+                        }
+                        resolve(true);
+                    });
+                });
+            });
+        },
         registerPartial: function(key, path) {
             return $.get(
                 chrome.runtime.getURL('content/options/templates/' + path),
@@ -46,7 +93,8 @@ define("utils",function (require) {
                 // Save it using the Chrome extension storage API.
                 chrome.storage.sync.set(obj, function () {
                     // Notify that we saved.
-                    console.log('saved');
+                    console.log('saved',obj);
+
                     resolve(true)
                 });
             });

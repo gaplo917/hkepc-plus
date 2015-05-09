@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-md-12" role="group" aria-label="" >
+        <div class="col-md-3" ><h3>{{description}}</h3></div>
+        {{#each buttons}}
+        <button class="btn btn-default {{status}} {{../btnClass}} switch-control" data-value="{{value}}">{{label}}</button>
+        {{/each}}
+    </div>
+</div>

@@ -15,7 +15,7 @@ define(function (require) {
 
         // run all these async task first
         Q.all([
-            Utils.registerPartial('checkbox', 'checkbox.hbs.html'),
+            Utils.registerPartial('switchControl', 'switchControl.hbs.html'),
             Utils.registerPartial('clickControl', 'clickControl.hbs.html')
         ]).then(function () {
 
@@ -30,5 +30,9 @@ define(function (require) {
                 });
         });
 
+
+        $('.developer > .clear-btn').click(function () {
+            chrome.storage.sync.clear();
+        });
     });
 });

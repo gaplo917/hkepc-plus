@@ -22,6 +22,16 @@ define("EpcModel", function () {
                     //according to font.json
                 ]
             }
+        },
+        switchs:{
+            addons:{
+                context:"/content/addons/addons.json",
+                btnClass: "addons-control",
+                description: "Addons (咐加模組)",
+                buttons: [
+                    //Dynamically generate ref to clickControl-sample.json according to theme.json
+                ]
+            }
         }
     };
 });

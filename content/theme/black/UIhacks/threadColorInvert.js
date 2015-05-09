@@ -2,6 +2,7 @@
  * Created by Gaplo917 on 3/5/15.
  */
 $(function(){
+
     $('.datatable tr .subject a').each(function () {
         var inlineStyle = $(this).attr('style');
         if(inlineStyle !== undefined){

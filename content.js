@@ -1,11 +1,14 @@
 /**
  * Created by Gaplo917 on 2/5/15.
  */
-
+var hkepcWidget;
+var forumDisplay;
+var viewThread;
+var pm;
 $(function(){
 
 	// SetUp the base model for later user
-	var hkepcWidget ={
+	hkepcWidget = {
 		// Pagination Button
 		pageButton : $('.pages a, .pageback a'),
 
@@ -45,14 +48,14 @@ $(function(){
 	};
 
 
-	var forumDisplay = {
+	forumDisplay = {
 		contentHeader: $('.colplural, .colplural th, .colplural td, th.highlight, td.highlight'),
 
 		// redundent pixel on ForumDisplay
 		threadBorder : $('.threadtype')
 	};
 
-	var viewThread = {
+	viewThread = {
 		// 每個 Post 尾
 		adcontent : $('.adcontent'),
 
@@ -94,82 +97,11 @@ $(function(){
 
 	};
 
-    var pm = {
+    pm = {
         // PM 查看消息
         readBtns : $('.pm_list .more a')
     };
 
-	// Change the 發表於 XX 小時前 | 只看該作者 to the left panel
-	viewThread.postTimeStampPanel.each(function () {
-		var panel = $(this);
-		panel.parents('.postcontent').siblings('.postauthor').append(panel);
-		panel.css({
-			'font-size':'10px',
-			'padding':'5px',
-			'text-align': 'center'
-		});
-		panel.find('img').remove();
-	});
-
-	// Change the button UI
-	$('.pmreply button, .btnbar button').each(function () {
-		$(this).addClass('btn btn-info postbtn');
-	});
-
-	// Change the button UI
-	hkepcWidget.bigButton.addClass('btn btn-info');
-
-	// Change the button UI
-	hkepcWidget.quickEditor.postButton.addClass('btn btn-info');
-
-
-	// Replace the traditional code block by rainbowJs
-	hkepcWidget.blockCode.each(function () {
-		var code = $(this),
-			codeContent = [];
-
-		code.find('li').each(function (index) {
-			codeContent.push($(this).html().replace('<br>',''));
-		});
-
-		var codeContentStr = codeContent.join(""),
-			guid = guidGenerator();
-
-		code.attr('data-id',guid);
-		code.attr('data-expand',0);
-		code.html('<button style="background: inherit!important;" class="btn btn-info" id="'+ guid + '">Floating </button><pre><code data-language="generic">' + codeContentStr + '</code></pre>');
-
-        $('#'+guid).click(function(){
-
-			hkepcWidget.blockCode.each(function () {
-
-				if($(this).attr('data-id') === guid && $(this).attr('data-expand') === "0"){
-					// floating window
-					$(this).attr('data-expand',1);
-					$(this).addClass('floating');
-					$('html').css({
-						overflow:"hidden"
-					});
-				}
-				else if($(this).attr('data-id') === guid && $(this).attr('data-expand') === "1"){
-					// original size
-					$(this).attr('data-expand',0);
-					$(this).removeClass('floating');
-					$('html').css({
-						overflow:"auto"
-					});
-				}
-			});
-		});
-	});
-
-
-
-    pm.readBtns.each(function () {
-       $(this).addClass('btn btn-xs btn-info postbtn');
-        $(this).removeClass('to');
-
-    });
 
 });
 
