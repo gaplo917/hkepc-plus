@@ -10,8 +10,12 @@
     "betterCodeBlock":{
         "id":2,
         "name":"Better CodeBlock",
-        "css":[],
+        "css":[
+            "/plugins/rainbow/monokai.css",
+            "css/betterCodeBlock.css"
+        ],
         "js":[
+            "/plugins/rainbow/rainbow-custom.min.js",
             "js/betterCodeBlock.js"
         ]
     },

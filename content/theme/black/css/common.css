@@ -10,7 +10,7 @@ html, body {
 }
 /*Generic Elemenet*/
 body, td, input, textarea, select, button {
-    color: #D0D0C7 !important;
+    color: #CCCCC0 !important;
 
 }
 
@@ -45,25 +45,7 @@ a{
 .datalist .datatable, .datalist .datatable th, .datalist .datatable td {
     border-color: #000 !important;
 }
-/* Code Block */
-.blockcode {
-    background: inherit !important;
-    border:inherit !important;
-}
-.blockcode.floating{
-    position:fixed!important;
-    top:0;
-    left:10%!important;
-    width:80%!important;
-}
-.blockcode.floating pre{
-    width:100%;
-    height:900px;
-    float:left;
-    overflow: auto;
-    background: rgba(39,40,34,0.9) !important;
 
-}
 /*All Post/ Reply Button*/
 .postbtn, .replybtn {
     width: inherit!important;

@@ -102,3 +102,7 @@
 .postmessage .locked  a {
     color: #D62 !important;
 }
+/*remove 相關文章 redundant line*/
+.box li {
+    border-bottom:inherit!important;
+}

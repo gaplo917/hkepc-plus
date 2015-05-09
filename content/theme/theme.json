@@ -10,16 +10,13 @@
             "css/pm.css",
             "css/viewThread.css",
             "css/widget.css",
-            "/plugins/bootstrap/css/bootstrap.min.css",
-            "/plugins/rainbow/monokai.css"
+            "/plugins/bootstrap/css/bootstrap.min.css"
         ],
         "js":[
             "UIhacks/threadColorInvert.js",
             "UIhacks/blurFloatingWindow.js",
             "UIhacks/threadStatus.js",
-            "/plugins/bootstrap/js/bootstrap.min.js",
-            "/plugins/rainbow/rainbow-custom.min.js"
-
+            "/plugins/bootstrap/js/bootstrap.min.js"
         ]
     }
 

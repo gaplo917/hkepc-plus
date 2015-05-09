@@ -47,7 +47,7 @@ define('EpcController',function (require) {
                     console.log(self.model);
 
                     // Add the compiled HTML to main
-                    $('#main').append(compiledHTML);
+                    $('#setting').append(compiledHTML);
 
                     self.applyCallbacks(callbacksAfterRender);
                 });
