@@ -10,14 +10,23 @@
 /*UserName*/
 .pm_list .cite cite, .pm_list .cite cite a{
     color:#CECF36!important;
+
 }
 
 /*Reply TextArea*/
 .pmreply textarea{
     border: inherit;
     background-color: #333333;
+
+}
+
+.pm_list .summary{
+    font-size: 1.2em!important;
+    line-height: 2em;
+
 }
 
 .pm_list li{
+    padding:30px 140px 30px 75px!important;
     border-bottom: inherit!important;
 }
