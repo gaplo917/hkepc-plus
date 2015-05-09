@@ -1,6 +1,6 @@
 {
     "default":{
-        "name":"Default"
+        "name":"Original"
     },
     "black":{
         "name":"Black",
@@ -18,6 +18,22 @@
             "UIhacks/threadStatus.js",
             "/plugins/bootstrap/js/bootstrap.min.js"
         ]
+    },
+    "warm":{
+        "name":"Warm",
+        "css":[
+            "css/common.css",
+            "css/forumdisplay.css",
+            "css/pm.css",
+            "css/viewThread.css",
+            "css/widget.css",
+            "/plugins/bootstrap/css/bootstrap.min.css"
+        ],
+        "js":[
+            "UIhacks/threadColorInherit.js",
+            "UIhacks/blurFloatingWindow.js",
+            "UIhacks/threadStatus.js",
+            "/plugins/bootstrap/js/bootstrap.min.js"
+        ]
     }
-
 }

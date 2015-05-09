@@ -1,0 +1,108 @@
+/**
+ * Created by Gaplo917 on 2/5/15.
+ */
+/* Every of the post will have empty adcontent */
+.adcontent {
+    background-color: #e6e6c5 !important;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+/*Left Panel (showing the author) */
+.mainbox td.postauthor {
+    background-color: #efefc5 !important;
+}
+
+/*回覆|發貼制 bg*/
+.forumcontrol table td {
+    background-color: #ddddc0 !important;
+}
+
+/* 發表於 yyyy-m-dd hh:mm*/
+.posterinfo a, .posterinfo em {
+    color: #666644 !important;
+}
+.postact{
+    max-width: none!important;
+}
+/*Redundant area new reply/post button*/
+.modaction{
+    display: none;
+}
+
+/*引用*/
+.quote {
+    background-color: #e6e6c5 !important;
+}
+
+/* Code Block*/
+.quote blockquote {
+    padding: 10px 20px !important;
+}
+
+/*相關文章*/
+.box h1 {
+    background: inherit !important;
+
+}
+
+/*倒序看帖 | 樓層數目*/
+.postinfo strong a {
+    border: inherit !important;
+
+}
+
+/*Thread Title*/
+#threadtitle {
+    border: inherit !important;
+    color:#111111!important;
+    font-weight: bolder!important;
+
+}
+
+/*Thread Title Text*/
+.postmessage h1, .postmessage h2 {
+    /*color: #eeeeee !important;*/
+    margin-bottom: 18px !important;
+    font-size: 1.3em !important;
+    font-style: italic;
+}
+
+/*Post Action panel*/
+.postactions {
+    border: inherit!important;
+}
+/*Remove Quick reply redundant area*/
+#f_post .postauthor{
+    display: none;
+}
+
+/*re-aglin the quicky reply area*/
+#f_post table{
+    width:inherit !important;
+    margin:auto !important;
+
+}
+
+/*facebook iframe*/
+.fb_iframe_widget iframe{
+    background-color: transparent;
+}
+
+/*附件: 您需要登錄才可以下載或查看附件。沒有帳號？註冊*/
+.locked{
+    background-color: #f0f0c5 !important;
+    border:0 !important;
+    width:100% !important;
+    text-align: center;
+}
+
+.postmessage .locked  em {
+     color: #ffffff !important;
+ }
+.postmessage .locked  a {
+    color: #D62 !important;
+}
+/*remove 相關文章 redundant line*/
+.box li {
+    border-bottom:inherit!important;
+}

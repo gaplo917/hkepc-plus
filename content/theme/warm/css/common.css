@@ -1,0 +1,94 @@
+/**
+ * Created by Gaplo917 on 2/5/15.
+ */
+
+
+/*-------------- Generic Element -------------*/
+html, body {
+    background: inherit !important;
+    background-color: #d0d0b0 !important;
+}
+/*Generic Elemenet*/
+body, td, input, textarea, select, button {
+    color: #111110 !important;
+
+}
+
+/*All Link */
+a{
+    color: #111110!important;
+}
+/*------------------------------------------*/
+
+
+
+/*------------Epc standard element-----------*/
+/*Normal Wrap*/
+#wrap {
+    background-color: #e6e6c5 !important;
+}
+/*Navigation area below banner*/
+#nav {
+    background-color: #dfdfc0 !important;;
+}
+
+#menu {
+    background-color: #ddddc0 !important;;
+}
+
+/*All caption in main page*/
+#mainIndex .forumInfo a.caption {
+    color: #234f9d !important;
+}
+
+/*All table element */
+.datalist .datatable, .datalist .datatable th, .datalist .datatable td {
+    border-color: #000 !important;
+}
+
+/*All Post/ Reply Button*/
+.postbtn, .replybtn {
+    width: inherit!important;
+    height: inherit!important;
+    background: inherit!important;
+    font-size: inherit!important;
+    line-height: inherit!important;
+}
+/*Popup Menu*/
+.popupmenu_popup{
+    background-color: #ddddc0 !important;
+}
+/*------------------------------------------*/
+
+
+
+/*---------Floating Post Window ------------*/
+.m_c {
+    background: inherit !important;
+    background-color: rgba(23, 23, 23, 0.8) !important;
+}
+
+.m_c .txt {
+    background: rgba(23, 23, 23, 0.4);
+    height: 19px;
+    color: #D0D0C7;
+}
+
+.m_c .float_post .txtarea {
+    background: rgba(23, 23, 23, 0.4);
+    color: #D0D0C7;
+}
+.m_c textarea{
+    background: rgba(23, 23, 23, 0.4);
+    color: #D0D0C7;
+}
+.editor_tb{
+    background: inherit!important;
+}
+/*------------------------------------------*/
+
+
+/*index.php TimeStamp*/
+.forumInfo cite{
+    color: #666666 !important;
+}
