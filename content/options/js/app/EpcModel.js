@@ -4,7 +4,9 @@
 define("EpcModel", function () {
 
     return EpcModel = {
-        title: "HKEPC +",
+        title: "Will Get Fom mainifest",
+        version:"Will Get Fom mainifest",
+        author: "Gap Lo",
         controls:{
             theme:{
                 context:"/content/theme/theme.json",

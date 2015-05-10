@@ -8,3 +8,9 @@ html, body{
 h1{
     color:#fff;
 }
+.click-control-container{
+    padding:40px 0px;
+}
+.switch-control-container{
+    padding:40px 0px;
+}

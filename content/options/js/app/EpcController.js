@@ -10,9 +10,9 @@ define('EpcController',function (require) {
         var self = this,
             callbacksAfterRender = [];
 
-        this.loadModel = function (modal) {
-            this.model = modal;
-
+        this.loadModel = function (model) {
+            this.model = model;
+            self.getAppVersion(model);
             return this;
         };
 
@@ -41,6 +41,14 @@ define('EpcController',function (require) {
             _.each(callbacks, function (cb) {
                 cb.apply(cb.param)
             });
-        }
+        };
+
+        this.getAppVersion = function (model) {
+            Utils.getJSONWithPromise(chrome.extension.getURL('manifest.json'))
+                .then(function (items) {
+                    model.version = items.version;
+                    model.title = items.name;
+            });
+        };
     };
 });
