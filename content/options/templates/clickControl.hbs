@@ -1,6 +1,6 @@
 <div class="row click-control-container">
     <div class="col-md-12 btn-group" role="group" aria-label="" >
-        <div class="col-md-3" ><h3>{{description}}</h3></div>
+        <div class="col-md-3" ><h3>{{description}} <button class="btn-xs btn-info">Import</button></h3></div>
         {{#each buttons}}
         <button class="btn btn-default {{status}} {{../btnClass}} click-control" data-value="{{value}}">{{label}}</button>
         {{/each}}

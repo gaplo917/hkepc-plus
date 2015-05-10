@@ -15,11 +15,11 @@ define(function (require) {
 
         // run all these async task first
         Q.all([
-            Utils.registerPartial('switchControl', 'switchControl.hbs.html'),
-            Utils.registerPartial('clickControl', 'clickControl.hbs.html')
+            Utils.registerPartial('switchControl', 'switchControl.hbs'),
+            Utils.registerPartial('clickControl', 'clickControl.hbs')
         ]).then(function () {
 
-            Utils.getWithPromise(chrome.runtime.getURL('content/options/templates/main.hbs.html'))
+            Utils.getWithPromise(chrome.runtime.getURL('content/options/templates/main.hbs'))
                 .then(function (templateHtml) {
                     //render main view
                     var template = Handlebars.compile(templateHtml);

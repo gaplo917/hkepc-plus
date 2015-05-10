@@ -7,6 +7,7 @@ define("EpcModel", function () {
         title: "Will Get Fom mainifest",
         version:"Will Get Fom mainifest",
         author: "Gap Lo",
+        authorSite: "http://blog.gaplotech.com",
         controls:{
             theme:{
                 context:"/content/theme/theme.json",
