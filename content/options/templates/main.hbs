@@ -1,9 +1,19 @@
 
 <h1>{{title}} v{{version}} </h1>
-<h5>By <a href="{{authorSite}}">{{author}}</a> <iframe
-        src="http://ghbtns.com/github-btn.html?user=gaplo917&repo=hkepc-plus&type=watch&count=true"
-        allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-</h5>
+<div class="col-md-6">
+    <div class="col-md-5">
+	    <h5>By <a href="{{authorSite}}">{{author}}</a> <iframe
+            src="http://ghbtns.com/github-btn.html?user=gaplo917&repo=hkepc-plus&type=watch&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20" ></iframe>
+      </h5>
+    </div>
+	<div class="col-md-7">
+		{{>donation}}
+	</div>
+
+
+</div>
+
 
 {{> clickControl controls.theme}}
 {{> clickControl controls.font}}

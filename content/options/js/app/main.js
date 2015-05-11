@@ -16,7 +16,8 @@ define(function (require) {
         // run all these async task first
         Q.all([
             Utils.registerPartial('switchControl', 'switchControl.hbs'),
-            Utils.registerPartial('clickControl', 'clickControl.hbs')
+            Utils.registerPartial('clickControl', 'clickControl.hbs'),
+            Utils.registerPartial('donation', 'donation.hbs')
         ]).then(function () {
 
             Utils.getWithPromise(chrome.runtime.getURL('content/options/templates/main.hbs'))

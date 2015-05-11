@@ -1,4 +1,9 @@
 {
+	"antiAliasedFont":{
+		"id":0,
+		"name":"Anti Aliased Font",
+		"css":["antialiasedfont.css"]
+	},
     "betterButton":{
         "id":1,
         "name":"Better Button",
