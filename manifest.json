@@ -5,14 +5,14 @@
 
 	"description": "This extension is targeted for providing better user experience of surfing http://www.hkepc.com/forum.",
 	"icons":{
-		"16":"hkepc+.png",
-		"64":"hkepc+.png",
-		"128":"hkepc+.png"
+		"16":"content/browser_action/hkepc+.png",
+		"64":"content/browser_action/hkepc+.png",
+		"128":"content/browser_action/hkepc+.png"
 	},
 
 	"browser_action": {
-		"default_icon": "hkepc+.png",
-		"default_popup": "popup.html"
+		"default_icon": "content/browser_action/hkepc+.png",
+		"default_popup": "content/browser_action/popup.html"
 	},
 
 	"author":"logap@me.com",
@@ -29,7 +29,7 @@
 
 	"web_accessible_resources": [
 		"plugins/*",
-		"popup.html",
+		"browser_action/popup.html",
 		"templates/*",
 		"content/font/*",
         "content/addons/*"
