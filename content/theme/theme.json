@@ -14,10 +14,11 @@
         ],
         "js":[
             "UIhacks/threadColorInvert.js",
-            "UIhacks/blurFloatingWindow.js",
-            "UIhacks/threadStatus.js",
             "/plugins/bootstrap/js/bootstrap.min.js"
-        ]
+        ],
+	    "addons":[
+		    "blurFloatingBackground","betterThreadStatus"
+	    ]
     },
     "warm":{
         "name":"Warm",
@@ -31,9 +32,10 @@
         ],
         "js":[
             "UIhacks/threadColorInherit.js",
-            "UIhacks/blurFloatingWindow.js",
-            "UIhacks/threadStatus.js",
             "/plugins/bootstrap/js/bootstrap.min.js"
-        ]
+        ],
+	    "addons":[
+		    "blurFloatingBackground","betterThreadStatus"
+	    ]
     }
 }

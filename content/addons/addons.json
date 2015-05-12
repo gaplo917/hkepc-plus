@@ -39,6 +39,20 @@
         "js":[
             "index.js"
         ]
-    }
+    },
+	"betterThreadStatus":{
+		"id":5,
+		"name":"Better Thread Status",
+		"js":[
+			"betterThreadStatus.js"
+		]
+	},
+	"blurFloatingBackground":{
+		"id":6,
+		"name":"Thread Color Invert",
+		"js":[
+			"blurFloatingBackground.js"
+		]
+	}
 
 }

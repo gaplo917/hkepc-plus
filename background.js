@@ -85,5 +85,18 @@ function applyPlugin(opts){
             });
         }
 
+        if(response[opts.setting].addons !== undefined){
+            // For each addons
+            _.each(response[opts.setting].addons, function (addonKey) {
+
+                applyPlugin({
+                    tabId : opts.tabId,
+                    setting : addonKey,
+                    json : "addons.json",
+                    context: 'content/addons/'
+                });
+
+            });
+        }
     });
 }
