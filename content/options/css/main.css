@@ -14,3 +14,10 @@ h1{
 .switch-control-container{
     padding:40px 0px;
 }
+.btn.switch-control{
+    margin-bottom: 10px;
+}
+
+.popover{
+    color:#000;
+}

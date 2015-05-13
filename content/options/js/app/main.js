@@ -3,6 +3,7 @@
  */
 define(function (require) {
     var $          = require('jquery'),
+        bootstrap  = require('bootstrap'),
         _          = require('underscore'),
         Handlebars = require('handleBars'),
         Q          = require('q'),
@@ -20,14 +21,20 @@ define(function (require) {
             Utils.registerPartial('donation', 'donation.hbs')
         ]).then(function () {
 
-            Utils.getWithPromise(chrome.runtime.getURL('content/options/templates/main.hbs'))
+            return Utils.getWithPromise(chrome.runtime.getURL('content/options/templates/main.hbs'))
                 .then(function (templateHtml) {
                     //render main view
                     var template = Handlebars.compile(templateHtml);
                     var epc = new EpcController();
                     epc.loadModel(EpcModel)
-                        .render(template)
-
+                        .registerCallbacks(function () {
+                            $('[data-toggle="popover"]').popover({
+                                trigger:'hover',
+                                html:true,
+                                delay: { "show": 200, "hide": 1000 }
+                            });
+                        })
+                        .render(template);
                 });
         });
 

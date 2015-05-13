@@ -1,8 +1,10 @@
 {
 	"antiAliasedFont":{
 		"id":0,
-		"name":"Anti Aliased Font",
-		"css":["antialiasedfont.css"]
+		"name":"Anti Aliased Font(反鋸齒字體)",
+		"css":["antialiasedfont.css"],
+		"description":"High dpi Monitor 使用效會比較良好，如果 low dpi用有機會字體太幼不夠 pixel render ",
+		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
 	},
     "betterButton":{
         "id":1,
@@ -10,11 +12,13 @@
         "css":[],
         "js":[
             "js/betterButton.js"
-        ]
+        ],
+	    "description":"用新的按鈕取代原始 EPC 的按鈕",
+	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
     },
     "betterCodeBlock":{
         "id":2,
-        "name":"Better CodeBlock",
+        "name":"Developer-friendly Code Block",
         "css":[
             "/plugins/rainbow/monokai.css",
             "css/betterCodeBlock.css"
@@ -22,7 +26,9 @@
         "js":[
             "/plugins/rainbow/rainbow-custom.min.js",
             "js/betterCodeBlock.js"
-        ]
+        ],
+	    "description":"Support Monokai theme code highlight syntax for general coding. Also support expand the code block for wider view",
+	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
     },
     "changeTimestampPos":{
         "id":3,
@@ -30,7 +36,9 @@
         "css":[],
         "js":[
             "js/changeTimestampPos.js"
-        ]
+        ],
+	    "description":"每個 POST 更加簡潔的介面",
+	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
     },
     "showOnOffline":{
         "id":4,
@@ -38,21 +46,27 @@
         "css":[],
         "js":[
             "index.js"
-        ]
+        ],
+	    "description":"顯示用家的現時的況態",
+	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
     },
 	"betterThreadStatus":{
 		"id":5,
 		"name":"Better Thread Status",
 		"js":[
 			"betterThreadStatus.js"
-		]
+		],
+		"description":"新的已閲/未閲的圖案",
+		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
 	},
 	"blurFloatingBackground":{
 		"id":6,
-		"name":"Thread Color Invert",
+		"name":"Better focus on floating window",
 		"js":[
 			"blurFloatingBackground.js"
-		]
+		],
+		"description":"當有懸浮視窗時，模糊背景",
+		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
 	}
 
 }

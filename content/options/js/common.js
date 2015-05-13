@@ -8,7 +8,7 @@ requirejs.config({
     },
     paths: {
         jquery: '../../../plugins/jquery/jquery-2.1.3',
-        bootstrap: '../../plugins/bootstrap/js/bootstrap.js',
+        bootstrap: '../../../plugins/bootstrap/js/bootstrap.min',
         q: '../../../plugins/q/q',
         handleBars:'../../../plugins/handlebar/handlebars-v3.0.3',
         underscore:'../../../plugins/underscore/underscore',

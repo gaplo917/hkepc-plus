@@ -29,6 +29,8 @@ define("ClickControl",function (require) {
                                 _.each(context, function (option,optionKey) {
                                     control.buttons.push({
                                         label: option.name,
+                                        description:option.description,
+                                        author:option.author,
                                         value: optionKey
                                     });
                                 });

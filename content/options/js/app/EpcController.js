@@ -1,5 +1,6 @@
 define('EpcController',function (require) {
     var $          = require('jquery'),
+        bootstrap  = require('bootstrap'),
         _          = require('underscore'),
         Q          = require('q'),
         Utils      = require('utils'),
@@ -13,6 +14,14 @@ define('EpcController',function (require) {
         this.loadModel = function (model) {
             this.model = model;
             self.getAppVersion(model);
+            return this;
+        };
+
+        this.registerCallbacks = function (cb) {
+            if(cb instanceof Array)
+                callbacksAfterRender.concat(cb);
+            else
+                callbacksAfterRender.push(cb);
             return this;
         };
 
