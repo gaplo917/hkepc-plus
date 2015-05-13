@@ -9,12 +9,12 @@ $(function(){
     });
 
     // Change the button UI
-    hkepcWidget.bigButton.addClass('btn btn-info');
+    hkepcWidget.bigButton().addClass('btn btn-info');
 
     // Change the button UI
-    hkepcWidget.quickEditor.postButton.addClass('btn btn-info');
+    hkepcWidget.quickEditor.postButton().addClass('btn btn-info');
 
-    pm.readBtns.each(function () {
+    pm.readBtns().each(function () {
         $(this).addClass('btn btn-xs btn-info postbtn');
         $(this).removeClass('to');
 

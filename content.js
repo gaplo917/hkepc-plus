@@ -7,107 +7,184 @@ var viewThread;
 var pm;
 $(function(){
 
-	// SetUp the base model for later user
+	var start = new Date().getTime();
+
+
+	// SetUp the base model for later user, wrapped by function is eliminate init time
 	hkepcWidget = {
 		// Pagination Button
-		pageButton : $('.pages a, .pageback a'),
+		pageButton: function () {
+			return $('.pages a, .pageback a');
+		},
 
 		// 公告 http://www.hkepc.com/forum/
-		announcement : $('#ann'),
+		announcement: function () {
+			return $('#ann');
+		},
 
-		group : $('#mainIndex .group'),
+		group: function () {
+			return $('#mainIndex .group');
+		},
 
-		mainPortal : $('#mainPortal, #mainIndex, #mainPoll, #mainUpdates'),
+		mainPortal: function () {
+			return $('#mainPortal, #mainIndex, #mainPoll, #mainUpdates');
+		},
 
 		// Quick reply editor
-		quickEditor:{
-			topPanel: $('.editor_tb'),
-			content: $('#f_post .txtarea'),
-			postButton : $('#fastpostsubmit')
+		quickEditor: {
+			topPanel: function () {
+				return $('.editor_tb');
+			},
+			content: function () {
+				return $('#f_post .txtarea');
+			},
+			postButton: function () {
+				return $('#fastpostsubmit');
+			}
 		},
 
 		// Main editor
-		editor:{
-			main:$('.editorcontent'),
-			titleInput: $('.editorcontent input.txt'),
-			contentInput: $('.editorcontent textarea'),
-			redundant: $('.newediter'),
-			showSourceCheckBox: $('a.plugeditor')
+		editor: {
+			main: function () {
+				return $('.editorcontent');
+			},
+			titleInput: function () {
+				return $('.editorcontent input.txt');
+			},
+			contentInput: function () {
+				return $('.editorcontent textarea');
+			},
+			redundant: function () {
+				return $('.newediter');
+			},
+			showSourceCheckBox: function () {
+				return $('a.plugeditor');
+			}
 		},
-		countReadNumber: $('.nums em'),
-
-		footer:$('#footer'),
-
-		floatingPostEditor:{
-			container: $('.m_c'),
-			titleInput: $('.m_c .txt'),
-			contentInput: $('.m_c .textarea')
+		countReadNumber: function () {
+			return $('.nums em');
 		},
-		bigButton : $('.postbtn, .replybtn'),
-		blockCode : $('.blockcode')
+
+		footer: function () {
+			return $('#footer');
+		},
+
+		floatingPostEditor: {
+			container: function () {
+				return $('.m_c');
+			},
+			titleInput: function () {
+				return $('.m_c .txt');
+			},
+			contentInput: function () {
+				return $('.m_c .textarea');
+			}
+		},
+		bigButton: function () {
+			return $('.postbtn, .replybtn');
+		},
+		blockCode: function () {
+			return $('.blockcode');
+		}
 	};
 
 
 	forumDisplay = {
-		contentHeader: $('.colplural, .colplural th, .colplural td, th.highlight, td.highlight'),
+		contentHeader: function () {
+			return $('.colplural, .colplural th, .colplural td, th.highlight, td.highlight');
+		},
 
 		// redundent pixel on ForumDisplay
-		threadBorder : $('.threadtype')
+		threadBorder: function () {
+			return $('.threadtype');
+		}
 	};
 
 	viewThread = {
 		// 每個 Post 尾
-		adcontent : $('.adcontent'),
+		adcontent: function () {
+			return $('.adcontent');
+		},
 
 		// 左邊 Panel
-		leftPostAuthor : $('.mainbox td.postauthor'),
+		leftPostAuthor: function () {
+			return $('.mainbox td.postauthor');
+		},
 
 		// 回覆／發貼制 bg
-		topPanel : $('.forumcontrol table td'),
+		topPanel: function () {
+			return $('.forumcontrol table td');
+		},
 
 		// 發表於 yyyy-m-dd hh:mm
-		postTimeStamp : $('.posterinfo a, .posterinfo em'),
+		postTimeStamp: function () {
+			return $('.posterinfo a, .posterinfo em');
+		},
 
 		//引用
-		quote : $('.quote'),
+		quote: function () {
+			return $('.quote');
+		},
 
 		// Code Block
-		blockQuote : $('.quote blockquote'),
+		blockQuote: function () {
+			return $('.quote blockquote');
+		},
 
 		//相關文章
-		relatedPost: $('.box h1'),
+		relatedPost: function () {
+			return $('.box h1');
+		},
 
 		//倒序看帖 / 樓層數目
-		postInfo : $('.postinfo strong a '),
-
-		threadTitle : {
-			container : $('#threadtitle'),
-			text : $('.postmessage h1, .postmessage h2')
+		postInfo: function () {
+			return $('.postinfo strong a ');
 		},
 
-		postAction :{
-			container : $('.postactions')
+		threadTitle: {
+			container: function () {
+				return $('#threadtitle');
+			},
+			text: function () {
+				return $('.postmessage h1, .postmessage h2');
+			}
 		},
 
-		postTimeStampPanel :$('.postcontent .postinfo .authorinfo'),
+		postAction: {
+			container: function () {
+				return $('.postactions');
+			}
+		},
 
-        // Threads subject
-        threads : $('.datatable tr .subject a'),
+		postTimeStampPanel: function () {
+			return $('.postcontent .postinfo .authorinfo');
+		},
 
-        popUpUserInfo: {
-            container: $('.popupmenu_popup.userinfopanel'),
-            userStatus: $('.popupmenu_popup.userinfopanel .popuserinfo > p > em')
-        }
+		// Threads subject
+		threads: function () {
+			return $('.datatable tr .subject a');
+		},
+
+		popUpUserInfo: {
+			container: function () {
+				return $('.popupmenu_popup.userinfopanel');
+			},
+			userStatus: function () {
+				return $('.popupmenu_popup.userinfopanel .popuserinfo > p > em');
+			}
+		}
 
 
 	};
 
-    pm = {
-        // PM 查看消息
-        readBtns : $('.pm_list .more a')
-    };
+	pm = {
+		// PM 查看消息
+		readBtns: function () {
+			return $('.pm_list .more a');
+		}
+	};
 
-
+	console.log(start - new Date().getTime());
 });
 
 function guidGenerator() {

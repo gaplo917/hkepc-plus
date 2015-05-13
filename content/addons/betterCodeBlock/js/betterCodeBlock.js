@@ -3,7 +3,7 @@
  */
 // Replace the traditional code block by rainbowJs
 $(function () {
-    hkepcWidget.blockCode.each(function () {
+    hkepcWidget.blockCode().each(function () {
         var code = $(this),
             codeContent = [];
 
@@ -21,7 +21,7 @@ $(function () {
         $('#'+guid).click(function(){
 
             var btn = $(this);
-            hkepcWidget.blockCode.each(function () {
+            hkepcWidget.blockCode().each(function () {
 
                 if($(this).attr('data-id') === guid && $(this).attr('data-expand') === "0"){
 

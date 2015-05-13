@@ -4,7 +4,7 @@
 $(function () {
 
     // Change the 發表於 XX 小時前 | 只看該作者 to the left panel
-    viewThread.postTimeStampPanel.each(function () {
+    viewThread.postTimeStampPanel().each(function () {
         var panel = $(this);
         panel.parents('.postcontent').siblings('.postauthor').append(panel);
         panel.css({
