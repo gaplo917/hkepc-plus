@@ -3,23 +3,23 @@
  */
 $(function () {
 
-    //remove the original float container
-    $('#append_parent').remove();
-
-    // append it to under html
-    $('html').append('<div id="append_parent"></div>');
+    var targetsToBlur = $('#outer_wrap > div').not('#append_parent');
 
     // Bind the button that will trigger float window
     $('#post_reply a, #newspecial a, .postact a').click(function () {
 
-        $('body').css({"-webkit-filter":"blur(2px)"});
+        targetsToBlur.each(function () {
+            $(this).css({"-webkit-filter":"blur(2px)"});
+        });
 
         // wait a moment for the dialog the generate
         setTimeout(function () {
             var epcFloatContainer = $('#append_parent');
 
             epcFloatContainer.find('.float_close, #postsubmit').click(function () {
-                $('body').css({"-webkit-filter":"none"});
+                targetsToBlur.each(function () {
+                    $(this).css({"-webkit-filter":"none"});
+                });
             });
             epcFloatContainer.find('button').addClass('btn btn-info postbtn');
             epcFloatContainer.find('button').css({"margin-bottom":"20px"});
