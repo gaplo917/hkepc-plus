@@ -29,7 +29,6 @@ define("SwitchPanel",function (require) {
                                     control.buttons.push({
                                         key: optionKey,
                                         description:option.description,
-                                        author:option.author,
                                         label: option.name,
                                         value: option.id
                                     });

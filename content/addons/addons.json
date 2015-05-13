@@ -3,8 +3,11 @@
 		"id":0,
 		"name":"Anti Aliased Font(反鋸齒字體)",
 		"css":["antialiasedfont.css"],
-		"description":"High dpi Monitor 使用效果會比較良好，如果 low dpi用有機會字體太幼不夠 pixel render ",
-		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+		"description":{
+            "content":"High dpi Monitor 使用效果會比較良好，如果 low dpi用有機會字體太幼不夠 pixel render ",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview/#anti-aliased-font'>Preview</a>"
+        }
 	},
     "betterButton":{
         "id":1,
@@ -13,8 +16,11 @@
         "js":[
             "js/betterButton.js"
         ],
-	    "description":"用新的按鈕取代原始 EPC 的按鈕",
-	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+	    "description":{
+            "content":"用新的按鈕取代原始 EPC 的按鈕",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview/#better-button'>Preview</a>"
+        }
     },
     "betterCodeBlock":{
         "id":2,
@@ -27,8 +33,12 @@
             "/plugins/rainbow/rainbow-custom.min.js",
             "js/betterCodeBlock.js"
         ],
-	    "description":"Support Monokai theme code highlight syntax for general coding. Also support expand the code block for wider view",
-	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+	    "description":{
+            "content":"Support Monokai theme code highlight syntax for general coding. Also support expand the code block for wider view",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview/#developer-friendly-code-block'>Preview</a>"
+
+        }
     },
     "changeTimestampPos":{
         "id":3,
@@ -37,8 +47,12 @@
         "js":[
             "js/changeTimestampPos.js"
         ],
-	    "description":"每個 POST 更加簡潔的介面",
-	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+        "description":{
+            "content":"每個 POST 更加簡潔的介面",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview/#better-post'>Preview</a>"
+
+        }
     },
     "showOnOffline":{
         "id":4,
@@ -47,8 +61,12 @@
         "js":[
             "index.js"
         ],
-	    "description":"顯示用家的現時的況態",
-	    "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+        "description":{
+            "content":"顯示用家的現時的況態",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview/#show-user-onoff'>Preview</a>"
+
+        }
     },
 	"betterThreadStatus":{
 		"id":5,
@@ -56,8 +74,12 @@
 		"js":[
 			"betterThreadStatus.js"
 		],
-		"description":"新的已閲/未閲的圖案",
-		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+        "description":{
+            "content":"新的已閲/未閲/己鎖的圖案",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview-2/#better-thread-status'>Preview</a>"
+
+        }
 	},
 	"blurFloatingBackground":{
 		"id":6,
@@ -65,8 +87,12 @@
 		"js":[
 			"blurFloatingBackground.js"
 		],
-		"description":"當有懸浮視窗時，模糊背景",
-		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+        "description":{
+            "content":"當有懸浮視窗時，模糊背景",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview-2/#blur-floating-bg'>Preview</a>"
+
+        }
 	},
     "biggerFontSizeOnEachThread":{
         "id":7,
@@ -77,8 +103,12 @@
         "js":[
 
         ],
-        "description":"增大每個主題的體，令你更清楚及專注看每一個主題<iframe width='1000px' height='500px'src='http://blog.gaplotech.com'></iframe>",
-        "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+        "description":{
+            "content":"增大每個主題的字體，令你更清楚及專注看每一個主題",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview-2/#bigger-font-size-on-each-thread'>Preview</a>"
+
+        }
     }
 
 }

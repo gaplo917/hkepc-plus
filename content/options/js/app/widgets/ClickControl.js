@@ -30,7 +30,6 @@ define("ClickControl",function (require) {
                                     control.buttons.push({
                                         label: option.name,
                                         description:option.description,
-                                        author:option.author,
                                         value: optionKey
                                     });
                                 });
