@@ -3,7 +3,7 @@
 		"id":0,
 		"name":"Anti Aliased Font(反鋸齒字體)",
 		"css":["antialiasedfont.css"],
-		"description":"High dpi Monitor 使用效會比較良好，如果 low dpi用有機會字體太幼不夠 pixel render ",
+		"description":"High dpi Monitor 使用效果會比較良好，如果 low dpi用有機會字體太幼不夠 pixel render ",
 		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
 	},
     "betterButton":{
@@ -67,6 +67,18 @@
 		],
 		"description":"當有懸浮視窗時，模糊背景",
 		"author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
-	}
+	},
+    "biggerFontSizeOnEachThread":{
+        "id":7,
+        "name":"Bigger Title",
+        "css":[
+            "biggerFontSizeOnEachThread.css"
+        ],
+        "js":[
+
+        ],
+        "description":"增大每個主題的體，令你更清楚及專注看每一個主題<iframe width='1000px' height='500px'src='http://blog.gaplotech.com'></iframe>",
+        "author":"@<a href='http://blog.gaplotech.com'>LoGap</a>"
+    }
 
 }

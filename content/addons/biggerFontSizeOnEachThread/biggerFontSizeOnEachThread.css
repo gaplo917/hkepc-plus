@@ -1,0 +1,5 @@
+/*Increase text size on each thread*/
+.datalist .datatable th.subject{
+    font-size:17px;
+    padding:26px 0;
+}

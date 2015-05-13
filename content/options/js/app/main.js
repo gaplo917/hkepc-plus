@@ -29,9 +29,22 @@ define(function (require) {
                     epc.loadModel(EpcModel)
                         .registerCallbacks(function () {
                             $('[data-toggle="popover"]').popover({
-                                trigger:'hover',
+                                trigger: 'manual',
                                 html:true,
                                 delay: { "show": 200, "hide": 1000 }
+                            }).on("mouseenter", function () {
+                                var _this = this;
+                                $(this).popover("show");
+                                $(this).siblings(".popover").on("mouseleave", function () {
+                                    $(_this).popover('hide');
+                                });
+                            }).on("mouseleave", function () {
+                                var _this = this;
+                                setTimeout(function () {
+                                    if (!$(".popover:hover").length) {
+                                        $(_this).popover("hide")
+                                    }
+                                }, 100);
                             });
                         })
                         .render(template);

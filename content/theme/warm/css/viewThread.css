@@ -9,12 +9,12 @@
 
 /*Left Panel (showing the author) */
 .mainbox td.postauthor {
-    background-color: #efefc5 !important;
+    background-color: #e7e7b9 !important;
 }
 
 /*回覆|發貼制 bg*/
 .forumcontrol table td {
-    background-color: #ddddc0 !important;
+    background-color: #e7e7b9 !important;
 }
 
 /* 發表於 yyyy-m-dd hh:mm*/

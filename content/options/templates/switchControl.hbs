@@ -2,7 +2,9 @@
     <div class="col-md-12" role="group" aria-label="" >
         <div class="col-md-3" ><h3>{{description}}</h3></div>
         {{#each buttons}}
-        <button class="btn btn-default {{status}} {{../btnClass}} switch-control" data-toggle="popover" data-placement="top" data-trigger="focus" title="{{label}}" data-content="{{description}}<br/>{{author}}" data-value="{{value}}">{{label}}</button>
+        <div class="col-md-offset-3">
+            <button class="btn btn-default {{status}} {{../btnClass}} switch-control" data-toggle="popover" data-placement="right" data-trigger="focus" title="{{label}}" data-content="{{description}}<br/>{{author}}" data-value="{{value}}">{{label}}</button>
+        </div>
         {{/each}}
     </div>
 </div>

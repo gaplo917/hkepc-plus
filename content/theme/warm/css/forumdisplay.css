@@ -11,12 +11,6 @@
     border-top: inherit!important;
 }
 
-/*Increase text size on each thread*/
-.datalist .datatable th.subject{
-     font-size:17px;
-     padding:26px 0;
- }
-
 /*Mouse over effect*/
 .datalist .datatable tbody:hover{
     background-color: rgba(0,255,0,0.1);

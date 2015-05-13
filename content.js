@@ -184,7 +184,7 @@ $(function(){
 		}
 	};
 
-	console.log(start - new Date().getTime());
+	console.log("init model time",new Date().getTime() -start );
 });
 
 function guidGenerator() {

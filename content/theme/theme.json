@@ -17,8 +17,27 @@
             "/plugins/bootstrap/js/bootstrap.min.js"
         ],
 	    "addons":[
-		    "blurFloatingBackground","betterThreadStatus"
 	    ]
+    },
+    "blackWithAddons":{
+        "name":"Black(With Addons)",
+        "css":[
+            "/content/theme/black/css/common.css",
+            "/content/theme/black/css/forumdisplay.css",
+            "/content/theme/black/css/pm.css",
+            "/content/theme/black/css/viewThread.css",
+            "/content/theme/black/css/widget.css",
+            "/plugins/bootstrap/css/bootstrap.min.css"
+        ],
+        "js":[
+            "/content/theme/black/UIhacks/threadColorInvert.js",
+            "/plugins/bootstrap/js/bootstrap.min.js"
+        ],
+        "addons":[
+            "blurFloatingBackground",
+            "betterThreadStatus",
+            "biggerFontSizeOnEachThread"
+        ]
     },
     "warm":{
         "name":"Warm",
@@ -35,7 +54,26 @@
             "/plugins/bootstrap/js/bootstrap.min.js"
         ],
 	    "addons":[
-		    "blurFloatingBackground","betterThreadStatus"
 	    ]
+    },
+    "warmWithAddons":{
+        "name":"Warm(With Addons)",
+        "css":[
+            "/content/theme/warm/css/common.css",
+            "/content/theme/warm/css/forumdisplay.css",
+            "/content/theme/warm/css/pm.css",
+            "/content/theme/warm/css/viewThread.css",
+            "/content/theme/warm/css/widget.css",
+            "/plugins/bootstrap/css/bootstrap.min.css"
+        ],
+        "js":[
+            "/content/theme/warm/UIhacks/threadColorInherit.js",
+            "/plugins/bootstrap/js/bootstrap.min.js"
+        ],
+        "addons":[
+            "blurFloatingBackground",
+            "betterThreadStatus",
+            "biggerFontSizeOnEachThread"
+        ]
     }
 }

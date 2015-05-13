@@ -6,7 +6,7 @@
 /*-------------- Generic Element -------------*/
 html, body {
     background: inherit !important;
-    background-color: #d0d0b0 !important;
+    background-color: #d0d0a0 !important;
 }
 /*Generic Elemenet*/
 body, td, input, textarea, select, button {
@@ -25,11 +25,11 @@ a{
 /*------------Epc standard element-----------*/
 /*Normal Wrap*/
 #wrap {
-    background-color: #e6e6c5 !important;
+    background-color: #efefc5 !important;
 }
 /*Navigation area below banner*/
 #nav {
-    background-color: #dfdfc0 !important;;
+    background-color: #dfdfb5 !important;;
 }
 
 #menu {
@@ -56,7 +56,7 @@ a{
 }
 /*Popup Menu*/
 .popupmenu_popup{
-    background-color: #ddddc0 !important;
+    background-color: #f1f1d0 !important;
 }
 /*------------------------------------------*/
 
