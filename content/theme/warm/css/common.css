@@ -65,21 +65,21 @@ a{
 /*---------Floating Post Window ------------*/
 .m_c {
     background: inherit !important;
-    background-color: rgba(23, 23, 23, 0.8) !important;
+    background-color: rgba(255, 255, 197, 0.9) !important;
 }
 
 .m_c .txt {
-    background: rgba(23, 23, 23, 0.4);
+    background: rgba(255, 255, 197, 0.4);
     height: 19px;
     color: #D0D0C7;
 }
 
 .m_c .float_post .txtarea {
-    background: rgba(23, 23, 23, 0.4);
+    background: rgba(239, 239, 197, 0.4);
     color: #D0D0C7;
 }
 .m_c textarea{
-    background: rgba(23, 23, 23, 0.4);
+    background: rgba(239, 239, 197, 0.4);
     color: #D0D0C7;
 }
 .editor_tb{
