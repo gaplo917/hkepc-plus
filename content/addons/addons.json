@@ -109,6 +109,22 @@
             "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview-2/#bigger-font-size-on-each-thread'>Preview</a>"
 
         }
+    },
+    "betterPm":{
+        "id":8,
+        "name":"Better PM",
+        "css":[
+            "css/betterPm.css"
+        ],
+        "js":[
+            "js/betterPm.js"
+        ],
+        "description":{
+            "content":"更清楚的 PM 系統，自己和對方的對話一目了然。",
+            "author":"<span class='pull-right'>@<a href='http://blog.gaplotech.com'>LoGap</a></span>",
+            "referenceLink":"<a class='btn-xs btn-info' href='http://blog.gaplotech.com/hkepc-chrome-plugin-preview-2/#better-pm'>Preview</a>"
+
+        }
     }
 
 }

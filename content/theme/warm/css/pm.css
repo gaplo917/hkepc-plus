@@ -30,20 +30,3 @@
     padding:30px 140px 30px 75px!important;
     border-bottom: inherit!important;
 }
-
-.colplural{
-    background-color: #f4f4b5 !important;
-}
-
-.self{
-    background-color: #f4f4b5 !important;
-}
-
-.self > .cite{
-    text-align: right;
-}
-.self > .summary{
-
-    margin-left:60px!important;
-    text-align: left;
-}

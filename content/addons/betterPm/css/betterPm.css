@@ -1,0 +1,8 @@
+.self > .cite{
+    text-align: right;
+}
+.self > .summary{
+    float:right;
+    margin-left:60px!important;
+    text-align: left;
+}
