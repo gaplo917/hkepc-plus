@@ -1,9 +1,9 @@
 {
     "default":{
-        "name":"Original"
+        "name":"原始"
     },
     "black":{
-        "name":"Black",
+        "name":"黑魂",
         "css":[
             "css/common.css",
             "css/forumdisplay.css",
@@ -20,7 +20,7 @@
 	    ]
     },
     "blackWithAddons":{
-        "name":"Black(With Addons)",
+        "name":"黑魂(With Addons)",
         "css":[
             "/content/theme/black/css/common.css",
             "/content/theme/black/css/forumdisplay.css",
@@ -40,7 +40,7 @@
         ]
     },
     "warm":{
-        "name":"Warm",
+        "name":"減藍模式",
         "css":[
             "css/common.css",
             "css/forumdisplay.css",
@@ -57,7 +57,7 @@
 	    ]
     },
     "warmWithAddons":{
-        "name":"Warm(With Addons)",
+        "name":"減藍模式(With Addons)",
         "css":[
             "/content/theme/warm/css/common.css",
             "/content/theme/warm/css/forumdisplay.css",

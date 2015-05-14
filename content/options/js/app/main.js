@@ -54,6 +54,7 @@ define(function (require) {
 
         $('.developer > .clear-btn').click(function () {
             chrome.storage.sync.clear();
+            location.reload();
         });
     });
 });

@@ -16,6 +16,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
                 if (items.theme !== undefined) {
                     applyPlugin({
                         tabId : tabId,
+                        tab: tab,
                         setting : items.theme,
                         json : "theme.json",
                         context: 'content/theme/'
@@ -25,6 +26,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
                 if(items.font !== undefined){
                     applyPlugin({
                         tabId : tabId,
+                        tab: tab,
                         setting : items.font,
                         json : "font.json",
                         context: 'content/font/'
@@ -37,6 +39,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
                         if(addon !== undefined){
                             applyPlugin({
                                 tabId : tabId,
+                                tab: tab,
                                 setting : addonKey,
                                 json : "addons.json",
                                 context: 'content/addons/'
@@ -54,6 +57,22 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
 function applyPlugin(opts){
     $.getJSON(chrome.runtime.getURL(opts.context + opts.json),function(response){
+
+        //default true
+        var isUrlMatched = true;
+
+        if(response[opts.setting].matches !== undefined){
+            // by default all plugins will be applied under hkepc.com/forum
+            // please specify "matches":["YourURL"] in the json if you want the plugin only be applied on specific URL
+            _.each(response[opts.setting].matches, function (match) {
+                var pattern = new RegExp(match);
+                isUrlMatched = isUrlMatched && pattern.test(opts.tab.url);
+            });
+        }
+        // exit if URL no matched
+        if(!isUrlMatched) return;
+
+
 
         if(response[opts.setting].css !== undefined){
             // For each css
