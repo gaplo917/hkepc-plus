@@ -1,7 +1,9 @@
 {{! Donation }}
-<script src="../../plugins/paypal/paypal-button.min.js?merchant=TMBKHQ3M3JZBY"
-        data-button="donate"
-        data-name="Support HKEPC (Non-official) Chrome extension development"
-        data-currency="HKD"
-        async
-        ></script>
+<form name="_xclick" action="https://www.paypal.com/hk/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="lo@me.com">
+<input type="hidden" name="item_name" value="Support HKEPC (Non-official) Chrome extension development">
+<input type="hidden" name="currency_code" value="HKD">
+<input type="hidden" name="amount" value="">
+<input type="image" src="http://www.paypal.com/en_GB/i/btn/x-click-butcc-donate.gif" border="0" name="submit" alt="使用 PayPal 付款快速、免費而且安全！">
+</form>
