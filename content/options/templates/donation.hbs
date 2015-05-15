@@ -1,9 +1,25 @@
 {{! Donation }}
-<form name="_xclick" action="https://www.paypal.com/hk/cgi-bin/webscr" method="post">
+<select name="" class="pull-left form-control" id="paypal-select" style="height: 45px;width: 100px;">
+    <option value="10">10 HKD</option>
+    <option selected value="20">20 HKD</option>
+    <option value="50">50 HKD</option>
+    <option value="100">100 HKD</option>
+    <option value="200">200 HKD</option>
+    <option value="500">500 HKD</option>
+    <option value="1000">1000 HKD</option>
+    <option value="2000">2000 HKD</option>
+    <option value="5000">5000 HKD</option>
+</select>
+<script>
+    $('#paypal-select').on('change', function () {
+        $('#paypal-form').find('input[name=amount]').val($(this).val());
+    });
+</script>
+<form id="paypal-form" class="pull-left" name="_xclick" action="https://www.paypal.com/hk/cgi-bin/webscr" method="post" style="height: 100px;width: 100px;">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="lo@me.com">
+<input type="hidden" name="business" value="logap@me.com">
 <input type="hidden" name="item_name" value="Support HKEPC (Non-official) Chrome extension development">
 <input type="hidden" name="currency_code" value="HKD">
-<input type="hidden" name="amount" value="">
+<input type="hidden" name="amount" value="10">
 <input type="image" src="http://www.paypal.com/en_GB/i/btn/x-click-butcc-donate.gif" border="0" name="submit" alt="使用 PayPal 付款快速、免費而且安全！">
 </form>
