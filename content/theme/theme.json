@@ -10,7 +10,8 @@
             "css/pm.css",
             "css/viewThread.css",
             "css/widget.css",
-            "/plugins/bootstrap/css/bootstrap.min.css"
+	        "css/search.css",
+	        "/plugins/bootstrap/css/bootstrap.min.css"
         ],
         "js":[
             "UIhacks/threadColorInvert.js",
@@ -27,7 +28,8 @@
             "/content/theme/black/css/pm.css",
             "/content/theme/black/css/viewThread.css",
             "/content/theme/black/css/widget.css",
-            "/plugins/bootstrap/css/bootstrap.min.css"
+	        "/content/theme/black/css/search.css",
+	        "/plugins/bootstrap/css/bootstrap.min.css"
         ],
         "js":[
             "/content/theme/black/UIhacks/threadColorInvert.js",
@@ -47,7 +49,8 @@
             "css/pm.css",
             "css/viewThread.css",
             "css/widget.css",
-            "/plugins/bootstrap/css/bootstrap.min.css"
+	        "css/search.css",
+	        "/plugins/bootstrap/css/bootstrap.min.css"
         ],
         "js":[
             "UIhacks/threadColorInherit.js",
@@ -64,7 +67,8 @@
             "/content/theme/warm/css/pm.css",
             "/content/theme/warm/css/viewThread.css",
             "/content/theme/warm/css/widget.css",
-            "/plugins/bootstrap/css/bootstrap.min.css"
+	        "/content/theme/warm/css/search.css",
+	        "/plugins/bootstrap/css/bootstrap.min.css"
         ],
         "js":[
             "/content/theme/warm/UIhacks/threadColorInherit.js",

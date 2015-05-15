@@ -92,3 +92,10 @@ a{
 .forumInfo cite{
     color: #666666 !important;
 }
+
+/* All text area*/
+input.txt, input.txtarea{
+    height: 28px !important;
+    background-color: #272822 !important;;
+    color: #D0D0C7;
+}

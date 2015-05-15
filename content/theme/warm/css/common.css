@@ -92,3 +92,9 @@ a{
 .forumInfo cite{
     color: #666666 !important;
 }
+
+/* All single line input*/
+input.txt, input.txtarea{
+    height: 28px !important;
+    background-color: #f0f0c5 !important;;
+}
