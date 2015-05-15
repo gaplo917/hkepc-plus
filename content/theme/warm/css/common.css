@@ -43,7 +43,7 @@ a{
 
 /*All table element */
 .datalist .datatable, .datalist .datatable th, .datalist .datatable td {
-    border-color: #000 !important;
+    border-color: #000000 !important;
 }
 
 /*All Post/ Reply Button*/
