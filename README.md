@@ -17,15 +17,16 @@ and dynamic reflect all the settings in JSON on Chrome option page.
 
 ### Getting start
 ##### Install the Extension
-1. Chrome -> setting -> More Tools -> Extension
 
-2. Tick Developer mode on top-right hand side
+1. Download Zip from github [HERE](https://github.com/gaplo917/hkepc-plus/releases)-> click downlaod "source code"
 
-3. Download Zip from github
+2. Unzip it
 
-4. Unzip it
+3. Chrome -> setting -> More Tools -> Extension
 
-5. Click "Load unpacked extension" select the folder
+4. Tick Developer mode on top-right hand side
+
+5. Click "Load unpacked extension" select the folder (hkepc-plus-x.x.x)
 
 6. You will see HKECP Plus will load and then click "Options" to enter the control panel
 
