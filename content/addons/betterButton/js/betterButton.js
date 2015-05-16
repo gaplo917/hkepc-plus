@@ -4,7 +4,7 @@
 $(function(){
 
     // Change the button UI
-    $('.pmreply button, .btnbar button,#searchsubmit').each(function () {
+    $('.pmreply button, .btnbar button').each(function () {
         $(this).addClass('btn btn-info postbtn');
     });
 

@@ -59,15 +59,19 @@ function applyPlugin(opts){
     $.getJSON(chrome.runtime.getURL(opts.context + opts.json),function(response){
 
         //default true
-        var isUrlMatched = true;
+        var isUrlMatched = false;
 
         if(response[opts.setting].matches !== undefined){
             // by default all plugins will be applied under hkepc.com/forum
             // please specify "matches":["YourURL"] in the json if you want the plugin only be applied on specific URL
             _.each(response[opts.setting].matches, function (match) {
                 var pattern = new RegExp(match);
-                isUrlMatched = isUrlMatched && pattern.test(opts.tab.url);
+                isUrlMatched = isUrlMatched || pattern.test(opts.tab.url);
             });
+        }
+        else{
+            // if no setting , allow all
+            isUrlMatched = true;
         }
         // exit if URL no matched
         if(!isUrlMatched) return;

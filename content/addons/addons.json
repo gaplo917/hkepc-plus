@@ -12,7 +12,9 @@
     "betterButton":{
         "id":1,
         "name":"Better Button",
-        "css":[],
+        "css":[
+            "css/betterButton.css"
+        ],
         "js":[
             "js/betterButton.js"
         ],
@@ -24,7 +26,7 @@
     },
     "betterCodeBlock":{
         "id":2,
-        "matches": ["hkepc.com/forum/viewthread"],
+        "matches": ["hkepc.com/forum/viewthread","hkepc.com/forum/redirect"],
         "name":"Developer-friendly Code Block",
         "css":[
             "/plugins/rainbow/monokai.css",
@@ -43,7 +45,7 @@
     },
     "changeTimestampPos":{
         "id":3,
-        "matches": ["hkepc.com/forum/viewthread"],
+        "matches": ["hkepc.com/forum/viewthread","hkepc.com/forum/redirect"],
         "name":"Better Post",
         "css":[],
         "js":[
@@ -58,7 +60,7 @@
     },
     "showOnOffline":{
         "id":4,
-        "matches": ["hkepc.com/forum/viewthread"],
+        "matches": ["hkepc.com/forum/viewthread","hkepc.com/forum/redirect"],
         "name":"Show User ON/OFFLINE",
         "css":[],
         "js":[

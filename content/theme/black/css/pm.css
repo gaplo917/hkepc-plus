@@ -31,3 +31,8 @@
     border-bottom: inherit!important;
 }
 
+/*Link Color*/
+.summary > a{
+    color: #8ec31f!important;
+}
+

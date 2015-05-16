@@ -18,6 +18,9 @@ body, td, input, textarea, select, button {
 a{
     color: #111110!important;
 }
+.t_msgfont a {
+    color: #54c320!important;
+}
 /*------------------------------------------*/
 
 
@@ -46,14 +49,6 @@ a{
     border-color: #000000 !important;
 }
 
-/*All Post/ Reply Button*/
-.postbtn, .replybtn {
-    width: inherit!important;
-    height: inherit!important;
-    background: inherit!important;
-    font-size: inherit!important;
-    line-height: inherit!important;
-}
 /*Popup Menu*/
 .popupmenu_popup{
     background-color: #f1f1d0 !important;

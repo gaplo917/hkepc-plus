@@ -1,6 +1,13 @@
 {
     "default":{
-        "name":"原始"
+        "name":"原始",
+        "css":[
+            "bootstrapConflict.css",
+            "/plugins/bootstrap/css/bootstrap.min.css"
+        ],
+        "js":[
+            "/plugins/bootstrap/js/bootstrap.min.js"
+        ]
     },
     "black":{
         "name":"黑魂",

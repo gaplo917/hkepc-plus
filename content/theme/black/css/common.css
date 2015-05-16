@@ -10,13 +10,19 @@ html, body {
 }
 /*Generic Elemenet*/
 body, td, input, textarea, select, button {
-    color: #CCCCC0 !important;
+    color: #929292 !important;
 
+}
+::selection {
+    background: #5d8e54; /* WebKit/Blink Browsers */
 }
 
 /*All Link */
 a{
-    color: #D0D0C7!important;
+    color: #868683 !important;
+}
+.t_msgfont a {
+    color: #8ec31f!important;
 }
 /*------------------------------------------*/
 
@@ -38,7 +44,7 @@ a{
 
 /*All caption in main page*/
 #mainIndex .forumInfo a.caption {
-    color: #66b9dd !important;
+    color: #3c8095 !important;
 }
 
 /*All table element */
@@ -46,14 +52,6 @@ a{
     border-color: #000 !important;
 }
 
-/*All Post/ Reply Button*/
-.postbtn, .replybtn {
-    width: inherit!important;
-    height: inherit!important;
-    background: inherit!important;
-    font-size: inherit!important;
-    line-height: inherit!important;
-}
 /*Popup Menu*/
 .popupmenu_popup{
     background-color: #000000 !important;
