@@ -11,9 +11,17 @@ $(function(){
             var color = splited[0],
                 rgb = hexToRgb(color.trim()),
                 rgbaArr = [];
-            rgbaArr.push(Math.abs(255-rgb.r));
-            rgbaArr.push(Math.abs(255-rgb.g));
-            rgbaArr.push(Math.abs(255-rgb.b));
+
+            // Invert the color and filter 1/3 of the brightness
+            rgbaArr.push(
+                parseInt(Math.abs(255 - rgb.r) / 3 * 2)
+            );
+            rgbaArr.push(
+                parseInt(Math.abs(255 - rgb.g) / 3 * 2)
+            );
+            rgbaArr.push(
+                parseInt(Math.abs(255 - rgb.b) / 3 * 2)
+            );
             rgbaArr.push(1);
 
             $(this).attr('style','color:rgba('+ rgbaArr.join(',')+')!important');
