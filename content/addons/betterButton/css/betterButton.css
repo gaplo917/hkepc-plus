@@ -1,0 +1,8 @@
+/*All Post/ Reply Button*/
+.postbtn, .replybtn {
+    width: inherit!important;
+    height: inherit!important;
+    background: inherit!important;
+    font-size: inherit!important;
+    line-height: inherit!important;
+}
